@@ -1,2 +1,3 @@
-type nulldefined = null | undefined;
-type bulldefined = boolean | null | undefined;
+let str: 'error' | 'warning' | 'success';
+str = 'error';
+console.log(str);
