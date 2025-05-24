@@ -1,9 +1,19 @@
-let obj = {a: 1, b: 2, c: 3};
-let res: number = 0;
-
-for (let key in obj) {
-	let elem = obj[key];
-	res += elem;
+function sum(x: number, y: number): number {
+    return x + y;
 }
 
-console.log(res);
+console.log(sum(1, 2));
+
+let arr: number[] = [1, 2, 3];
+
+function sumArray(arr: number[]): number {
+    let res = 0;
+
+    for (let num of arr) {
+        res += num;
+    }
+
+    return res;
+}
+
+console.log(sumArray(arr));
