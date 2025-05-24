@@ -1,2 +1,7 @@
-var arr = [1, '2', '3', 4, 5];
-console.log(arr);
+var varTest1;
+varTest1 = 1;
+varTest1 = null;
+var varTest2;
+varTest2 = 1;
+varTest2 = '1';
+varTest2 = false;
