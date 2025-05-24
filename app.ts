@@ -1,2 +1,4 @@
-let test: string = 'test';
-console.log(test);
+let string: string = 'строка';
+let number: number = 1;
+let boolean: boolean = true;
+console.log(string, number, boolean);
