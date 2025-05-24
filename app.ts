@@ -1,7 +1,8 @@
-let arr: number[] = [1, 2, 3, 4, 5];
+let obj = {a: 1, b: 2, c: 3};
 let res: number = 0;
 
-for (let elem of arr) {
+for (let key in obj) {
+	let elem = obj[key];
 	res += elem;
 }
 
