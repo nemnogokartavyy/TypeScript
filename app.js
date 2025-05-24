@@ -1,4 +1,3 @@
-var string = 'строка';
-var number = 1;
-var boolean = true;
-console.log(string, number, boolean);
+var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [1, 2, 3, 4, 5];
+console.log(arr1, arr2);
