@@ -1,2 +1,5 @@
-var date = { year: 2025, month: 5, day: 25 };
-console.log(date);
+var res = 0;
+for (var i = 0; i < 100; i++) {
+    res += i;
+}
+console.log(res);
