@@ -1,5 +1,11 @@
-var tpl1;
-tpl1 = ['1', '2', 3, 4, 5, 6, 7];
-var tpl2;
-tpl2 = [1, true, '2', 'false'];
-console.log(tpl1, tpl2);
+var daysOfWeek;
+(function (daysOfWeek) {
+    daysOfWeek[daysOfWeek["Monday"] = 0] = "Monday";
+    daysOfWeek[daysOfWeek["Tuesday"] = 1] = "Tuesday";
+    daysOfWeek[daysOfWeek["Wednesday"] = 2] = "Wednesday";
+    daysOfWeek[daysOfWeek["Thursday"] = 3] = "Thursday";
+    daysOfWeek[daysOfWeek["Friday"] = 4] = "Friday";
+    daysOfWeek[daysOfWeek["Saturday"] = 5] = "Saturday";
+    daysOfWeek[daysOfWeek["Sunday"] = 6] = "Sunday";
+})(daysOfWeek || (daysOfWeek = {}));
+;
