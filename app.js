@@ -1,2 +1,2 @@
-var date = new Date;
-console.log(date);
+var reg = new RegExp('.+?');
+console.log(reg);

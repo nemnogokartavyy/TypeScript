@@ -1,2 +1,2 @@
-let date: Date = new Date;
-console.log(date);
+let reg: RegExp = new RegExp('.+?');
+console.log(reg);
