@@ -1,18 +1,27 @@
-var event = {
-    name: 'my new event',
-    time: {
-        start: '2025-11-01',
-        finish: '2025-12-31'
-    }
-};
 var employee = {
     name: 'andrew',
     position: {
         name: 'programmer',
-        salary: 1000
+        salary: 1000,
     },
     addr: {
         country: 'belarus',
         city: 'minsk'
+    }
+};
+var user = {
+    name: 'john',
+    age: 30,
+    parents: {
+        mother: {
+            name: 'jane',
+            age: 30,
+            parents: null
+        },
+        father: {
+            name: 'eric',
+            age: 30,
+            parents: null
+        }
     }
 };

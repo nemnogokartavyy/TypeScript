@@ -1,39 +1,59 @@
-interface EventInt {
+interface Position {
     name: string,
-    time: {
-        start: string,
-        finish: string
-    }
+    salary: number,
 }
 
-let event: EventInt = {
-    name: 'my new event',
-    time: {
-        start: '2025-11-01',
-        finish: '2025-12-31'
-    }
+interface Addr {
+    country: string,
+    city: string,
 }
 
-interface EmployeeInt {
+interface Employee {
     name: string,
-    position: {
-        name: string,
-        salary: number
-    }
-    addr: {
-        country: string,
-        city: string
-    }
+    position: Position,
+    addr: Addr,
 }
 
-let employee: EmployeeInt = {
+let employee: Employee = {
     name: 'andrew',
     position: {
         name: 'programmer',
-        salary: 1000
+        salary: 1000,
     },
     addr: {
         country: 'belarus',
         city: 'minsk'
     }
 };
+
+interface Parent {
+    name: string,
+    age: number,
+    parents: null,
+}
+
+interface User {
+    name: string,
+    age: number,
+    parents: {
+        mother: Parent,
+        father: Parent,
+    }
+}
+
+let user: User = {
+    name: 'john',
+    age: 30,
+    parents: {
+        mother: {
+            name: 'jane',
+            age: 30,
+            parents: null
+        },
+        father: {
+            name: 'eric',
+            age: 30,
+            parents: null
+        }
+    }
+}
