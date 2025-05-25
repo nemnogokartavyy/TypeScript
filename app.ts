@@ -1,23 +1,41 @@
-let map: Map<string, number> = new Map([
-    ['key1', 1],
-    ['key2', 2],
-    ['key3', 3],
-]);
-
-console.log(map);
-
-let set: Set<number> = new Set([
-    1, 2, 3, 4, 5, 4, 3, 2, 1
-]);
-
-console.log(set);
-
-for (let i: number = 0; i < 10; i++) {
-    document.body.appendChild(document.createElement('div'));
+interface Employee {
+    name: string,
+    age: number,
+    salaryday: number
 }
 
-let divs: NodeList = document.body.querySelectorAll('div');
-console.log(divs);
+let obj: Employee = {
+    name: 'john',
+    age: 30,
+    salaryday: 1000,
+}
 
-let divsCol: HTMLCollection = document.body.getElementsByTagName('div');
-console.log(divsCol);
+interface Time {
+    hour: number,
+    minute: number,
+    second: number
+}
+
+let objTime1: Time = {
+    hour: 10,
+    minute: 10,
+    second: 10,
+}
+
+let objTime2: Time = {
+    hour: 10,
+    minute: 10,
+    second: 10,
+}
+
+let objTime3: Time = {
+    hour: 10,
+    minute: 10,
+    second: 10,
+}
+
+console.log(
+    obj,
+    objTime1,
+    objTime2, objTime3
+)
