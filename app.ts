@@ -1,27 +1,23 @@
-let elementPromise: Promise<any>;
+let map: Map<string, number> = new Map([
+    ['key1', 1],
+    ['key2', 2],
+    ['key3', 3],
+]);
 
-elementPromise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const element = document.querySelector('div');
-        if (element) {
-            resolve(element);
-        } else {
-            reject(new Error('Элемент не найден'));
-        }
-    }, 1000);
-});
+console.log(map);
 
-elementPromise.then((result) => {
-    const element = result as HTMLElement;
-    console.log('Полученный элемент:', element);
-}).catch((error) => {
-    console.error(error);
-});
+let set: Set<number> = new Set([
+    1, 2, 3, 4, 5, 4, 3, 2, 1
+]);
 
-let elem: HTMLElement = document.createElement('div');
-document.body.append(elem);
-console.log(elem);
+console.log(set);
 
-let list: HTMLUListElement = document.createElement('ul');
-document.body.append(list);
-console.log(list);
+for (let i: number = 0; i < 10; i++) {
+    document.body.appendChild(document.createElement('div'));
+}
+
+let divs: NodeList = document.body.querySelectorAll('div');
+console.log(divs);
+
+let divsCol: HTMLCollection = document.body.getElementsByTagName('div');
+console.log(divsCol);

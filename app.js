@@ -1,24 +1,17 @@
-var elementPromise;
-elementPromise = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        var element = document.querySelector('div');
-        if (element) {
-            resolve(element);
-        }
-        else {
-            reject(new Error('Элемент не найден'));
-        }
-    }, 1000);
-});
-elementPromise.then(function (result) {
-    var element = result;
-    console.log('Полученный элемент:', element);
-}).catch(function (error) {
-    console.error(error);
-});
-var elem = document.createElement('div');
-document.body.append(elem);
-console.log(elem);
-var list = document.createElement('ul');
-document.body.append(list);
-console.log(list);
+var map = new Map([
+    ['key1', 1],
+    ['key2', 2],
+    ['key3', 3],
+]);
+console.log(map);
+var set = new Set([
+    1, 2, 3, 4, 5, 4, 3, 2, 1
+]);
+console.log(set);
+for (var i = 0; i < 10; i++) {
+    document.body.appendChild(document.createElement('div'));
+}
+var divs = document.body.querySelectorAll('div');
+console.log(divs);
+var divsCol = document.body.getElementsByTagName('div');
+console.log(divsCol);
