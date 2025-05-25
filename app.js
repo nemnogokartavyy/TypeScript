@@ -1,27 +1,26 @@
-var employee = {
-    name: 'andrew',
-    position: {
-        name: 'programmer',
+var regExpArr = [];
+regExpArr.push(/abc/);
+console.log(regExpArr);
+var promisesArr = [
+    new Promise(function (resolve) { return setTimeout(function () { return resolve('Первый'); }, 1000); }),
+    new Promise(function (resolve) { return setTimeout(function () { return resolve('Второй'); }, 2000); }),
+    new Promise(function (resolve) { return setTimeout(function () { return resolve('Третий'); }, 1500); })
+];
+console.log(promisesArr);
+var workersArr = [
+    {
+        name: 'Петя',
+        surname: 'Петров',
+        age: 30,
         salary: 1000,
+        position: 'Программист'
     },
-    addr: {
-        country: 'belarus',
-        city: 'minsk'
+    {
+        name: 'Иван',
+        surname: 'Иванов',
+        age: 40,
+        salary: 1500,
+        position: 'Менеджер'
     }
-};
-var user = {
-    name: 'john',
-    age: 30,
-    parents: {
-        mother: {
-            name: 'jane',
-            age: 30,
-            parents: null
-        },
-        father: {
-            name: 'eric',
-            age: 30,
-            parents: null
-        }
-    }
-};
+];
+console.log(workersArr);

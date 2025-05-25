@@ -1,59 +1,40 @@
-interface Position {
-    name: string,
-    salary: number,
+let regExpArr: RegExp[] = [];
+
+regExpArr.push(/abc/);
+
+console.log(regExpArr);
+
+const promisesArr: Promise<string>[] = [
+    new Promise((resolve) => setTimeout(() => resolve('Первый'), 1000)),
+    new Promise((resolve) => setTimeout(() => resolve('Второй'), 2000)),
+    new Promise((resolve) => setTimeout(() => resolve('Третий'), 1500))
+];
+
+console.log(promisesArr);
+
+interface WorkerInt {
+    name: string;
+    surname: string;
+    age: number;
+    salary: number;
+    position: string;
 }
 
-interface Addr {
-    country: string,
-    city: string,
-}
-
-interface Employee {
-    name: string,
-    position: Position,
-    addr: Addr,
-}
-
-let employee: Employee = {
-    name: 'andrew',
-    position: {
-        name: 'programmer',
+let workersArr: WorkerInt[] = [
+    {
+        name: 'Петя',
+        surname: 'Петров',
+        age: 30,
         salary: 1000,
+        position: 'Программист'
     },
-    addr: {
-        country: 'belarus',
-        city: 'minsk'
+    {
+        name: 'Иван',
+        surname: 'Иванов',
+        age: 40,
+        salary: 1500,
+        position: 'Менеджер'
     }
-};
+];
 
-interface Parent {
-    name: string,
-    age: number,
-    parents: null,
-}
-
-interface User {
-    name: string,
-    age: number,
-    parents: {
-        mother: Parent,
-        father: Parent,
-    }
-}
-
-let user: User = {
-    name: 'john',
-    age: 30,
-    parents: {
-        mother: {
-            name: 'jane',
-            age: 30,
-            parents: null
-        },
-        father: {
-            name: 'eric',
-            age: 30,
-            parents: null
-        }
-    }
-}
+console.log(workersArr);
