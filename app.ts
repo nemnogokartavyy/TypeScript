@@ -1,18 +1,28 @@
-enum Months {
-    January = 1,
-    February = 2,
-    March = 3,
-    April = 4,
-    May = 5,
-    June = 6,
-    July = 7,
-    August = 8,
-    September = 9,
-    October = 10,
-    November = 11,
-    December = 12
+enum DaysOfWeek {
+    Monday = 'day1',
+    Tuesday = 'day2',
+    Wednesday = 'day3',
+    Thursday = 'day4',
+    Friday = 'day5',
+    Saturday = 'day6',
+    Sunday = 'day7'
 };
 
-let one: Months = Months.January;
-let five: Months = Months.May;
-console.log(one, five);
+console.log(DaysOfWeek.Monday);
+
+enum Months {
+    January = '1 месяц',
+    February = '2 месяц',
+    March = '3 месяц',
+    April = '4 месяц',
+    May = '5 месяц',
+    June = '6 месяц',
+    July = '7 месяц',
+    August = '8 месяц',
+    September = '9 месяц',
+    October = '10 месяц',
+    November = '11 месяц',
+    December = '12 месяц'
+};
+
+console.log(Months.January);
