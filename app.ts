@@ -1,40 +1,26 @@
-let regExpArr: RegExp[] = [];
-
-regExpArr.push(/abc/);
-
-console.log(regExpArr);
-
-const promisesArr: Promise<string>[] = [
-    new Promise((resolve) => setTimeout(() => resolve('Первый'), 1000)),
-    new Promise((resolve) => setTimeout(() => resolve('Второй'), 2000)),
-    new Promise((resolve) => setTimeout(() => resolve('Третий'), 1500))
+let daysWeek: string[] = [
+    'Воскресенье',
+    'Понедельник',
+    'Вторник',
+    'Среда',
+    'Четверг',
+    'Пятница',
+    'Суббота'
 ];
 
-console.log(promisesArr);
+function currentDay(year?: number, month?: number, date?: number): string {
+    const now = new Date();
 
-interface WorkerInt {
-    name: string;
-    surname: string;
-    age: number;
-    salary: number;
-    position: string;
-}
+    const y = year !== undefined ? year : now.getFullYear();
+    const m = month !== undefined ? month : now.getMonth();
+    const d = date !== undefined ? date : now.getDate();
 
-let workersArr: WorkerInt[] = [
-    {
-        name: 'Петя',
-        surname: 'Петров',
-        age: 30,
-        salary: 1000,
-        position: 'Программист'
-    },
-    {
-        name: 'Иван',
-        surname: 'Иванов',
-        age: 40,
-        salary: 1500,
-        position: 'Менеджер'
-    }
-];
+    const desDate = new Date(y, m, d);
 
-console.log(workersArr);
+    const dayIndex = desDate.getDay();
+    
+    return daysWeek[dayIndex];
+};
+
+console.log(currentDay());
+console.log(currentDay(2023, 10, 5));

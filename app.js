@@ -1,26 +1,21 @@
-var regExpArr = [];
-regExpArr.push(/abc/);
-console.log(regExpArr);
-var promisesArr = [
-    new Promise(function (resolve) { return setTimeout(function () { return resolve('Первый'); }, 1000); }),
-    new Promise(function (resolve) { return setTimeout(function () { return resolve('Второй'); }, 2000); }),
-    new Promise(function (resolve) { return setTimeout(function () { return resolve('Третий'); }, 1500); })
+var daysWeek = [
+    'Воскресенье',
+    'Понедельник',
+    'Вторник',
+    'Среда',
+    'Четверг',
+    'Пятница',
+    'Суббота'
 ];
-console.log(promisesArr);
-var workersArr = [
-    {
-        name: 'Петя',
-        surname: 'Петров',
-        age: 30,
-        salary: 1000,
-        position: 'Программист'
-    },
-    {
-        name: 'Иван',
-        surname: 'Иванов',
-        age: 40,
-        salary: 1500,
-        position: 'Менеджер'
-    }
-];
-console.log(workersArr);
+function currentDay(year, month, date) {
+    var now = new Date();
+    var y = year !== undefined ? year : now.getFullYear();
+    var m = month !== undefined ? month : now.getMonth();
+    var d = date !== undefined ? date : now.getDate();
+    var desDate = new Date(y, m, d);
+    var dayIndex = desDate.getDay();
+    return daysWeek[dayIndex];
+}
+// Примеры использования:
+console.log(currentDay()); // Сегодняшний день
+console.log(currentDay(2023, 10, 5)); // 5 ноября 2023
