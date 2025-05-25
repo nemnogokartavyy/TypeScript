@@ -1,11 +1,11 @@
-let country: {
+interface Country {
     name: string,
-    cities: string[],
+    cities: string[]
 };
 
-country = {
+let country: Country = {
     name: 'Республика Беларусь',
-    cities: ['Минск', 'Брест', 'Гродно', 'Гомель', 'Витебск', 'Могилев'];
+    cities: ['Минск', 'Брест', 'Гродно', 'Гомель', 'Витебск', 'Могилев']
 };
 
 console.log(country);
