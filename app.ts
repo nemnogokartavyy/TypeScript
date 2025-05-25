@@ -1,5 +1,5 @@
-function degNum(number: number, degree: number = 2): number {
-    return Math.pow(number, degree);
+function sum(...rest: number[]): number {
+    return rest.reduce((acc, elem) => acc += elem, 0);
 }
 
-console.log(degNum(4, 4));
+console.log(sum(1, 2, 3, 4, 5));
