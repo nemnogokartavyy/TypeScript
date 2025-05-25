@@ -1,5 +1,5 @@
-function sum(...rest: number[]): number {
-    return rest.reduce((acc, elem) => acc += elem, 0);
-}
+let func: (text: string) => void = function (text: string): void {
+    alert(text);
+};
 
-console.log(sum(1, 2, 3, 4, 5));
+console.log(func);
