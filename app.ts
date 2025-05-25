@@ -1,11 +1,12 @@
-type Func = (x: number, y: number,
-    z: number) => number;
+let func1 = (num1: number, num2: number): number => num1 + num2;
 
-let func: Func = function (x: number, y: number, z: number): number {
-    let sum: number = x + y + z;
-    return sum;
-}
+console.log(func1(1, 3));
 
-console.log(func(2, 3, 4));
+let func2 = (str: string): string[] => str.split('');
 
-type Func2 = (number: number, arrNumbers: number[]) => number[];
+console.log(func2('qwerty'));
+
+let arr: number[] = [1, 2, 3];
+let res: number[] = arr.map((num: number) => num ** 2);
+
+console.log(res);
