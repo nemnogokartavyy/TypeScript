@@ -1,3 +1,2 @@
-var str;
-str = 'err1or';
+var str = 'error';
 console.log(str);

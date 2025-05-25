@@ -1,3 +1,3 @@
-let str: 'error' | 'warning' | 'success';
-str = 'error';
+type test = 'error' | 'warning' | 'success';
+let str: test = 'error';
 console.log(str);
