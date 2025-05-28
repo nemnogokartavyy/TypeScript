@@ -1,26 +1,18 @@
-class Student {
-    name: string = 'Jack';
-    age: number = 21;
+class Employee {
+    name: string;
+    surname: string;
+    age: number;
+    salary: number;
 
-    getName(): string {
-        return this.name;
-    }
-
-    setName(name: string): void {
+    constructor(name: string, surname: string, age: number, salary: number) {
         this.name = name;
-    }
-
-    getAge(): number {
-        return this.age;
-    }
-
-    setAge(age: number): void {
+        this.surname = surname;
         this.age = age;
+        this.salary = salary;
     }
 }
 
-let student: Student = new Student;
-console.log(student.getName(), student.getAge());
-student.setName('Max');
-student.setAge(22);
-console.log(student.name, student.age);
+let employee1: Employee = new Employee('Петя', 'Иванов', 24, 1000);
+let employee2: Employee = new Employee('Константин', 'Ефимов', 34, 1200);
+
+console.log(employee1, employee2);

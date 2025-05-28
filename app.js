@@ -1,24 +1,12 @@
-var Student = /** @class */ (function () {
-    function Student() {
-        this.name = 'Jack';
-        this.age = 21;
-    }
-    Student.prototype.getName = function () {
-        return this.name;
-    };
-    Student.prototype.setName = function (name) {
+var Employee = /** @class */ (function () {
+    function Employee(name, surname, age, salary) {
         this.name = name;
-    };
-    Student.prototype.getAge = function () {
-        return this.age;
-    };
-    Student.prototype.setAge = function (age) {
+        this.surname = surname;
         this.age = age;
-    };
-    return Student;
+        this.salary = salary;
+    }
+    return Employee;
 }());
-var student = new Student;
-console.log(student.getName(), student.getAge());
-student.setName('Max');
-student.setAge(22);
-console.log(student.name, student.age);
+var employee1 = new Employee('Петя', 'Иванов', 24, 1000);
+var employee2 = new Employee('Константин', 'Ефимов', 34, 1200);
+console.log(employee1, employee2);
