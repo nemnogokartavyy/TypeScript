@@ -1,6 +1,7 @@
 class Student {
-
+    name: string = 'Jack';
+    age: number = 21;
 }
 
-let student1: Student = new Student;
-let student2: Student = new Student;
+let student: Student = new Student;
+console.log(student.name, student.age);
