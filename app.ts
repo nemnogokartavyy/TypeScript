@@ -1,33 +1,33 @@
 class User {
-    private name;
-    private age;
+    protected name: string;
+    protected surn: string;
 
-    constructor(name: string, age: number) {
+    constructor(name: string, surn: string) {
         this.name = name;
-        this.age = age;
+        this.surn = surn;
+    }
+}
+
+class Employee extends User {
+    protected salary: number;
+    constructor(name: string, surn: string, salary: number) {
+        super(name, surn);
+        this.salary = salary;
     }
 
     getName() {
         return this.name;
     }
 
-    getAge() {
-        return this.age;
+    getSurn() {
+        return this.surn;
     }
 
-    setName(name: string) {
-        this.name = name;
+    getSalary() {
+        return this.salary;
     }
-
-    setAge(age: number) {
-        this.age = age;
-    }
-
 }
 
-let user = new User('Max', 31);
-console.log(user);
-console.log(user.getName(), user.getAge());
-user.setName('Jack');
-user.setAge(40);
-console.log(user.getName(), user.getAge());
+let employee: Employee = new Employee("John", "Doe", 50000);
+
+console.log(employee.getName(), employee.getSurn(), employee.getSalary());
