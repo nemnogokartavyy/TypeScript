@@ -1,7 +1,7 @@
 var Student = /** @class */ (function () {
     function Student() {
     }
-    Student.specialty = 'слесарь';
+    Student.university = 'БГУ';
     return Student;
 }());
-console.log(Student.specialty);
+console.log(Student.university);

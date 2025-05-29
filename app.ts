@@ -1,5 +1,5 @@
 class Student {
-    public static specialty: string = 'слесарь';
+    public static university: string = 'БГУ';
 }
 
-console.log(Student.specialty);
+console.log(Student.university);
