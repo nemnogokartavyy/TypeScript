@@ -15,22 +15,45 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Figure = /** @class */ (function () {
     function Figure(perimeter, area) {
-        this.perimeter = perimeter;
-        this.area = area;
+        this._perimeter = perimeter;
+        this._area = area;
     }
     return Figure;
 }());
 var Square = /** @class */ (function (_super) {
     __extends(Square, _super);
-    function Square() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Square(perimeter, area, side) {
+        var _this = _super.call(this, perimeter, area) || this;
+        _this.side = side;
+        return _this;
     }
+    Square.prototype.perimeter = function () {
+        return this.side * 4;
+    };
+    Square.prototype.area = function () {
+        return this.side * this.side;
+    };
     return Square;
 }(Figure));
 var Rectangle = /** @class */ (function (_super) {
     __extends(Rectangle, _super);
-    function Rectangle() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Rectangle(perimeter, area, firstSide, secondSide) {
+        var _this = _super.call(this, perimeter, area) || this;
+        _this.firstSide = firstSide;
+        _this.secondSide = secondSide;
+        return _this;
     }
+    Rectangle.prototype.perimeter = function () {
+        return this.firstSide * 2 + this.secondSide * 2;
+    };
+    Rectangle.prototype.area = function () {
+        return this.firstSide * this.secondSide;
+    };
     return Rectangle;
 }(Figure));
+var squ = new Square(0, 0, 7);
+console.log(squ.perimeter());
+console.log(squ.area());
+var rect = new Rectangle(0, 0, 10, 5);
+console.log(rect.perimeter());
+console.log(rect.area());
