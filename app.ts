@@ -1,24 +1,17 @@
-class Calc {
-    public static getSum2(arr: number[]): number {
-        let sum: number = 0;
+abstract class Figure {
+    perimeter: number;
+    area: number;
 
-        for (let elem of arr) {
-            sum += Math.pow(elem, 2);
-        }
-
-        return sum;
-    }
-
-     public static getSum3(arr: number[]): number {
-        let sum: number = 0;
-
-        for (let elem of arr) {
-            sum += Math.pow(elem, 3);
-        }
-
-        return sum;
+    constructor(perimeter: number, area: number) {
+        this.perimeter = perimeter;
+        this.area = area
     }
 }
 
-console.log(Calc.getSum2([1,2,3,4,5]));
-console.log(Calc.getSum3([1,2,3,4,5]));
+class Square extends Figure {
+
+}
+
+class Rectangle extends Figure {
+
+}
